@@ -1,0 +1,14 @@
+@import 
+"root",
+"mixins",
+"global";
+
+@import
+"../block/header",
+"../block/hall",
+"../block/advant",
+"../block/manual",
+"../block/qna",
+"../block/footer";
+
+@import "breakpoint";

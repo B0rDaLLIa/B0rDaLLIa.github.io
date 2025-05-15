@@ -1,0 +1,277 @@
+.hall__inner {
+  z-index: 1;
+  position: relative;
+  height: 100%;
+}
+
+.hall__content-top {
+  width: fit-content;
+
+  .heading {
+    padding: 10vh 0 5vh;
+
+    &__title {
+      padding-bottom: 0.2em;
+    }
+
+    &__subtitle {
+      max-width: 500px;
+      line-height: 200%;
+    }
+  }
+}
+
+.hall__filter {
+  display: flex;
+  gap: 2.5%;
+
+  &-btn {
+    background: transparent;
+    border: 0;
+    color: var(--primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0;
+    transition: all 0.3s;
+  }
+}
+
+.hall__filter-item {
+  &--active {
+    button {
+      color: var(--accent-secondary);
+    }
+  }
+}
+
+.hall__gallery {
+  &-list {
+    display: grid;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 75%;
+    z-index: -1;
+
+    .slick {
+      &-list {
+        height: 100%;
+      }
+
+      &-track {
+        height: 100%;
+      }
+    }
+
+    .hall-1 {
+      background-color: var(--accent);
+    }
+
+    .hall-2 {
+      background-color: var(--primary);
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-tape {
+    color: rgb(255, 0, 0);
+    grid-area: 1 / 1;
+    height: 100%;
+    width: 100%;
+  }
+
+  &-base {
+    display: grid;
+    height: 100%;
+    background-color: blue;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    height: 100%;
+    width: 100%;
+    outline: 2px solid black;
+
+    background-color: aqua;
+  }
+
+  &-nav {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    background-color: red;
+    height: 16.8%;
+  }
+
+  &-thumbnail {
+    color: #ffc619;
+    height: 100%;
+    width: 100px;
+    outline: 2px solid black;
+  }
+
+  &-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: all 0.3s;
+    }
+
+    &::before {
+      background: var(--bg-secondary);
+      opacity: 0.4;
+    }
+  }
+}
+
+.hall__gallery-thumbnail .hall__gallery-wrapper::before {
+  opacity: 0.6;
+}
+
+.hall__gallery-thumbnail .hall__gallery-wrapper:hover:before {
+  opacity: 0.4;
+  background-color: var(--accent-secondary);
+}
+
+.hall__gallery-thumbnail .hall__gallery-wrapper::after {
+  background: url(../../source/general/icon/eye.svg) center no-repeat;
+  opacity: 0;
+}
+
+.hall__gallery-thumbnail .hall__gallery-wrapper:hover::after {
+  opacity: 1;
+}
+
+.hall__content-bottom {
+  width: fit-content;
+}
+
+.hall__option {
+  &-list {
+    display: grid;
+    grid-template: 1fr / 1fr;
+  }
+
+  &-item {
+    grid-area: 1 / 1;
+  }
+}
+
+.hall__description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  margin: 2em 0 5em;
+
+  &-item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 2.625em;
+    padding-left: 2.75em;
+    padding-right: 3.75em;
+    font-size: 1.125em;
+    width: fit-content;
+    background-image: var(--gradient-96);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0.675rem;
+      transform: translateY(-50%);
+      aspect-ratio: 1;
+      height: 1.35rem;
+      // background-color: aqua
+    }
+
+    &--room::before {
+      background: url(../../source/general/icon/nroom.svg) no-repeat center;
+    }
+
+    &--expand::before {
+      background: url(../../source/general/icon/expand.svg) no-repeat center;
+    }
+
+    &--capacity::before {
+      background: url(../../source/general/icon/capacity.svg) no-repeat center;
+    }
+  }
+}
+
+.hall__arrow-box {
+}
+
+.hall__nav-slider {
+}
+
+.hall__arrows {
+  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hall__arrow {
+  height: 70px;
+  width: 70px;
+  background-color: #ffc619;
+  border-radius: 50%;
+  outline: 1px solid #2e3441;
+  transition: all 0.3s;
+}
+
+.hall__arrow--prev {
+  background: url(../../source/general/icon/left.svg) no-repeat center;
+  background-size: 16px;
+  outline-color: #282b32;
+}
+
+.hall__arrow--next {
+  background: url(../../source/general/icon/right.svg) no-repeat center;
+  background-color: #2e3441;
+  background-size: 16px;
+}
+
+.hall__arrow:hover {
+  background-size: 17px;
+}
+
+.hall__nav-count {
+}
+
+.slide-current {
+}
+
+.slide-count {
+}
+
+.hall__btn {
+  padding: 90px 0;
+}
+
+.hall__btn-item {
+  @include btn-fill;
+  @include big-btn;
+}

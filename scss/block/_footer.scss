@@ -1,0 +1,113 @@
+.footer__inner {
+  position: relative;
+  display: flex;
+  padding: 5.7rem 0;
+  gap: 65px;
+}
+
+.footer__logo {}
+
+.footer__nav {
+  display: flex;
+  gap: 50px;
+}
+
+.footer__nav-item {
+  white-space: nowrap;
+}
+
+.footer__nav-phone {
+  &::before {
+    background-image: url(../../source/general/icon/hphone.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 29px;
+  }
+}
+
+.footer__nav-time {
+  &::before {
+    background-image: url(../../source/general/icon/calendar.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 29px;
+  }
+}
+
+.footer__nav-place {
+  &::before {
+    background-image: url(../../source/general/icon/hpin.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 29px;
+  }
+}
+
+.footer__nav-btnbox {}
+
+.footer__nav_btn {
+  @include small-btn;
+  outline-color: var(--accent);
+
+}
+
+
+.footer__column {
+  align-self: end;
+  justify-self: end;
+  width: 83px;
+  height: 100%;
+  margin-bottom: -1.7rem;
+
+  &-link {
+    display: flex;
+    position: absolute;
+    align-self: end;
+    // transform: translateY(calc(100% - 40vh - 83px));
+    flex-direction: column;
+    right: 0;
+    top: -41.5px;
+    // margin-right: 88px;
+    padding-top: 83px;
+    width: 83px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      aspect-ratio: 1;
+      background: #2E3441;
+      // url(../../source/general/icon/htg.svg) center
+      top: 0;
+      right: 0;
+      left: 0;
+
+      border-radius: 50%;
+    }
+
+    &::after {
+      background: url(../../source/general/icon/up.svg) center no-repeat;
+      // background-size: 16px;
+    }
+  }
+
+
+  &-text {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    p {
+      writing-mode: vertical-lr;
+      rotate: 180deg;
+      width: fit-content;
+      font-size: .6125rem;
+      white-space: nowrap;
+      padding-bottom: 3em;
+      color: #606571;
+      letter-spacing: .2em;
+
+      // transform: translateY(-100%);
+    }
+  }
+}

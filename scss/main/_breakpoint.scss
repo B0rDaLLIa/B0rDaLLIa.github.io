@@ -1,0 +1,431 @@
+@media (max-width: 1660px) {
+  // ===========================GLOBAL===========================
+  .heading__subtitle {
+    line-height: 160%;
+  }
+
+  // ===========================HEADER===========================
+
+  .header__background {
+    &-imgs {
+      right: calc(15% - 500px);
+    }
+
+    &-tag {
+      aspect-ratio: 1 / 1;
+      width: unset;
+      height: 30%;
+      left: -1vw;
+    }
+  }
+
+  // ===========================HALL===========================
+  // ===========================ADVANT===========================
+
+  // ===========================FOOTER===========================
+  .footer {
+    &__nav {
+      display: grid;
+      grid-template-columns: auto auto;
+      width: 100%;
+    }
+    &__inner {
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  // ===========================GLOBAL===========================
+
+  // ===========================HEADER===========================
+  .header {
+    height: fit-content;
+    max-height: unset;
+
+    &__background {
+      &-tag {
+        aspect-ratio: 1 / 1;
+        width: unset;
+        height: 30%;
+        left: -1vw;
+      }
+    }
+    &__box {
+      margin-bottom: calc(20vh + 30px);
+    }
+    &__row {
+      grid-template: 1fr 1fr / 1fr 1fr;
+      height: 20vh;
+      &-item:nth-child(2) {
+        grid-area: 1 / 1;
+      }
+    }
+
+    &__column-link {
+      display: none;
+    }
+  }
+
+  // ===========================HALL===========================
+
+  .hall {
+    height: fit-content;
+    max-height: unset;
+  }
+
+  // ===========================ADVANT===========================
+  .advant {
+    height: fit-content;
+    max-height: unset;
+  }
+  // ===========================MANUAL===========================
+  .manual {
+    height: fit-content;
+    max-height: unset;
+    &__inner {
+      padding: 60px 0;
+    }
+  }
+
+  // ===========================QNA===========================
+  .qna {
+    height: fit-content;
+    max-height: unset;
+  }
+}
+
+@media (max-width: 1200px) {
+  // ===========================GLOBAL===========================
+
+  .heading {
+    font-size: 1.2em;
+    margin-bottom: 0;
+  }
+
+  // ===========================HEADER===========================
+  .header {
+    &__background {
+      &-imgs {
+        right: calc(15% - 550px);
+        top: unset;
+        bottom: -5%;
+      }
+      &-illustration {
+        bottom: 0;
+        top: unset;
+        height: 80%;
+        img {
+          height: 100%;
+        }
+      }
+    }
+
+    &__contact {
+      gap: 20px;
+    }
+
+    &__nav {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__features {
+      flex-direction: column;
+      margin-bottom: calc(5vh + 600px - 70vw);
+    }
+  }
+
+  // ===========================HALL===========================
+
+  .hall {
+    &__gallery {
+      &-list {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1;
+        margin: 10% 0;
+      }
+    }
+  }
+
+  // ===========================ADVANT===========================
+  .advant {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__choice {
+      max-width: unset;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: unset;
+      grid-auto-rows: 15px;
+
+      &-card {
+        padding: 10%;
+        justify-content: center;
+        &:nth-child(1) {
+          grid-row: span 5;
+        }
+        &:nth-child(2) {
+          grid-row: span 9;
+        }
+        &:nth-child(3) {
+          grid-row: span 6;
+        }
+        &:nth-child(4) {
+          grid-row: span 7;
+          order: 1;
+        }
+        &:nth-child(5) {
+          grid-row: span 6;
+        }
+        &:nth-child(6) {
+          grid-row: span 8;
+          order: 2;
+        }
+      }
+    }
+
+    &__book {
+      &-img {
+        height: 100%;
+        &box {
+          position: absolute;
+          height: 400px;
+          left: 10%;
+          bottom: 0;
+        }
+        img {
+          height: 100%;
+          width: auto;
+          z-index: -2;
+        }
+      }
+      &-btn {
+        width: 100%;
+        &box {
+          z-index: 1;
+          width: 100%;
+          max-width: 650px;
+          padding: 50px 0 0;
+        }
+      }
+    }
+  }
+  // ===========================MANUAL===========================
+  // ===========================QNA===========================
+
+  .qna {
+    &__inner {
+      flex-direction: column;
+    }
+    &__content {
+      width: 100%;
+    }
+    &__book {
+      padding-left: 0;
+      &-dec {
+        left: 50%;
+        transform: translatex(-65%);
+      }
+    }
+  }
+  // ===========================FOOTER===========================
+  .footer {
+    &__nav {
+      width: unset;
+    }
+    &__inner {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  // ===========================GLOBAL===========================
+
+  // ===========================HEADER===========================
+  .header {
+    &__contact {
+      flex-direction: column;
+    }
+  }
+
+  // ===========================HALL===========================
+
+  // ===========================ADVANT===========================
+
+  // ===========================MANUAL===========================
+
+  .manual {
+    &__top {
+      padding-bottom: 6rem;
+    }
+    &__nav-slider {
+      bottom: 0rem;
+    }
+    &__slider {
+      &-wrapfill {
+        display: none;
+      }
+    }
+  }
+  // ===========================FOOTER===========================
+  .footer {
+    &__inner{
+          align-items: start;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  // ===========================GLOBAL===========================
+
+  .background {
+    &__grid {
+      grid-template: 1fr / 1fr 2.5fr 1fr;
+
+      &-item:first-child,
+      &-item:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .heading {
+    font-size: 1em;
+  }
+
+  // ===========================HEADER===========================
+  .header {
+    &__bottom {
+      padding-top: 165px;
+    }
+
+    &__top {
+      position: fixed;
+      width: calc(100vw - 40px);
+      z-index: 2000;
+      pointer-events: none;
+
+      &-row {
+        position: relative;
+        flex-direction: column;
+        align-items: start;
+
+        gap: 35px;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 100vw;
+
+          height: 112px;
+          top: -40px;
+          left: 50%;
+          transform: translateX(-50%);
+          transition: 0.3s 0.1s;
+          pointer-events: none;
+
+          background-color: var(--bg-primary);
+          box-shadow: 0 0 30px 20px var(--bg-primary);
+          z-index: 2;
+        }
+        &::after {
+          bottom: 100%;
+          height: unset;
+          background-color: var(--grid-primary);
+          box-shadow: 0 0 0 0 var(--grid-primary);
+
+          z-index: 0;
+
+          transition: 0.3s;
+        }
+      }
+      &-menu {
+        flex-direction: column;
+        align-items: start;
+        padding-left: 8px;
+        padding-bottom: 40px;
+        gap: 15px;
+        transform: translateY(-100%);
+        transition: 0.3s;
+        z-index: 1;
+      }
+    }
+  }
+
+  .menu--open.header__top {
+    pointer-events: unset;
+  }
+
+  .menu--open {
+    .header__top {
+      &-row {
+        &::before {
+          background-color: var(--grid-primary);
+          transition: 0.3s;
+
+          box-shadow: 0 0 0vh 0vh var(--grid-primary);
+        }
+        &::after {
+          transition: 0.3s 0.1s;
+          bottom: 0%;
+        }
+      }
+    }
+
+    .header__top-menu {
+      transform: translateY(0%);
+      transition: 0.3s 0.1s;
+    }
+  }
+
+  // ===========================HALL===========================
+  // ===========================FOOTER===========================
+
+  .footer {
+    &__nav {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  // ===========================GLOBAL===========================
+
+  .heading {
+    font-size: 0.8em;
+  }
+
+  // ===========================HEADER===========================
+  .header {
+  }
+
+  // ===========================HALL===========================
+
+  // ===========================ADVANT===========================
+}
+
+@media (max-width: 600px) {
+  // ===========================GLOBAL===========================
+
+  // ===========================MANUAL===========================
+
+  .manual {
+    &__nav-slider {
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+}

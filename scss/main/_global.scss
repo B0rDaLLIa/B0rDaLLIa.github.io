@@ -1,0 +1,263 @@
+html,
+body {
+  font-family: Muller, sans-serif;
+  color: var(--primary);
+  line-height: 110%;
+  scroll-behavior: smooth;
+  background: var(--bg-secondary);
+}
+
+::selection {
+  color: #fff;
+  background: var(--accent);
+  // vertical-align: middle;
+  // transform: translatey(40%);
+}
+
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.holder {
+  position: relative;
+  max-width: 1920px;
+  // overflow: hidden;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1820px;
+  padding: 0 20px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.noselect {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn {
+  border-radius: 60px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid transparent;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  outline-offset: -1px;
+  transition: all 0.3s;
+  white-space: nowrap;
+
+  &:hover {
+    box-shadow: 0 20px 30px -15px rgb(from var(--primary) r g b / 0.1);
+    // background: #282B30;
+    // background-size: 150%
+  }
+}
+
+.row-link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 77px;
+  height: 60px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.07);
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+}
+
+.background {
+  position: absolute;
+  // width: 100vw;
+  // margin-left: calc((100% - 100vw) / 2);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  &__grid {
+    display: grid;
+    grid-template: 1fr / 1fr 2.5fr 2.5fr 2.5fr 1fr;
+
+    height: 100%;
+    width: 100%;
+
+    &-item {
+      border: 0.5px solid var(--bg-border);
+      border-top: none;
+      border-bottom: none;
+    }
+
+    &-item:first-child {
+      border-left: none;
+    }
+
+    &-item:last-child {
+      border-right: none;
+    }
+
+    &-item--light {
+      background: var(--bg-gradient);
+    }
+  }
+}
+
+.heading {
+  // font-family: serif;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+
+  &__subtitle {
+    font-size: 1em;
+    line-height: 270%;
+  }
+
+  &__title {
+    font-size: 3.125em;
+    line-height: 125%;
+    font-weight: 900;
+  }
+}
+
+.arrow {
+  height: 70px;
+  width: 70px;
+  background-color: #ffc619;
+  border-radius: 50%;
+  outline: 1px solid #2e3441;
+  transition: all 0.3s;
+  background-size: 1rem;
+}
+
+.burger {
+  display: none;
+
+  position: fixed;
+  top: 31px;
+  right: 7px;
+  padding: 15px;
+  width: 29px;
+  height: 29px;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 9999;
+  transition: 0.3s;
+  gap: 6px;
+  span {
+    width: 29px;
+    height: 3px;
+    background-color: var(--accent);
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+}
+
+.menu--open + .burger {
+  span:first-child {
+    transform: translatey(4.5px) rotateZ(135deg);
+  }
+  span:last-child {
+    transform: translatey(-4.5px) rotateZ(-135deg);
+  }
+}
+
+// =========================BLOCK=========================
+
+.header {
+  @include block;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 2;
+  background: var(--bg-primary);
+
+  .background {
+    background-color: var(--bg-primary);
+    z-index: -1;
+  }
+}
+
+.hall {
+  @include block;
+  height: 100vh;
+  z-index: 1;
+
+  .background {
+    z-index: -1;
+
+    &__grid-item {
+      border-color: var(--accent);
+      opacity: 0.2;
+    }
+  }
+}
+
+.advant {
+  @include block;
+  height: 100vh;
+  z-index: 1;
+  background: var(--bg-primary);
+
+  .background {
+    background-color: var(--bg-primary);
+    z-index: -1;
+  }
+}
+
+.manual {
+  @include block;
+  height: 100vh;
+  z-index: 1;
+
+  .background {
+    z-index: -1;
+  }
+}
+
+.qna {
+  @include block;
+  z-index: 1;
+  background: var(--bg-primary);
+  // height: 100vh;
+
+  .background {
+    background-color: var(--bg-primary);
+    z-index: -1;
+  }
+}
+
+.footer {
+  @include block;
+  z-index: 1;
+  overflow: visible;
+
+  .background {
+    z-index: -1;
+  }
+}
+
+// =======================STRUCTURE=======================
